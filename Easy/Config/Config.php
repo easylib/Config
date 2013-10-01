@@ -1,5 +1,6 @@
 <?php
-namespace Easy/Config;
+namespace Easy\Config;
+
 class Config()
 {
 	public function __construct()

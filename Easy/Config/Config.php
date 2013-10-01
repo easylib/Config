@@ -4,12 +4,16 @@ class Config()
 {
 	public function __construct()
 	{
-		require("../config/config.php");
-		$this->c = $config;
+		
 	}
-	public function get($key)
+	public function readFile($file, $group = "DEFAULT")
 	{
-		return $this->c[$key];
+		require($file);
+		$this->c[$group] = $config;
+	}
+	public function get($key, $group = "DEFAULT")
+	{
+		return $this->c[$group][$key];
 	}
 }
 ?>
